@@ -1,2 +1,4 @@
-# nosql
-Practices about no-sql databases.
+# NoSQL Databases
+Practices done by:
+  - David Antuña Rodríguez
+  - Daniel Gutiérrex Gertrúdix
