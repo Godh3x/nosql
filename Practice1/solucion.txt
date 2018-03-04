@@ -1,0 +1,39 @@
+Práctica 1 -  NoSQL - Solución
+Nombre 1: David Antuña Rodríguez
+Nombre 2: Daniel Gutiérrez Gertrúdix
+Observaciones:
+
+Respuestas
+
+1# {persona : {nombre : "Bertoldo", edad : 25, direccion : {ciudad : "Santa Desidia", cp : 10021}, telefonos : {fijo : "666-666-666", movil : "999-999-999"}}}
+
+
+2# db.derbi.find({"in_reply_to_screen_name" : "Jezivi1"}).pretty()
+ 
+
+3# db.derbi.find({"user.verified" : true}).count()
+
+
+4# db.derbi.find({"user.followers_count" : {$gte : 800000}}).count()
+   db.derbi.find({"user.followers_count" : {$gte : 800000}}, {_id : 0, "user.followers_count" : 1, "user.screen_name" : 1})
+
+5# db.derbi.find({}, {_id : 0, "user.location" : 1, "user.screen_name" : 1}).sort({"user.location" : -1, "user.screen_name" : 1})
+
+
+6# db.derbi.find({"user.verified" : true}, {_id : 0, user : 1}).sort({"user.followers_count" : 1}).limit(1).pretty()
+
+
+7# db.pru.find({}, {_id : 0}).sort({b : 1, a : -1}).pretty()
+
+8#¿Verdadero o Falso? (V/F): F
+8#Justificación: Porque ordena la collección completa aunque solo se pidan 5.
+
+
+9#Instrucción que falta: x[y] = 2
+
+10# db.pru.find({},{a : {$slice : -2}})
+
+
+
+
+

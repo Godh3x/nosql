@@ -1,0 +1,40 @@
+Práctica 1 -  NoSQL - Solución
+Nombre 1: David Antuña Rodríguez
+Nombre 2: Daniel Gutiérrez Gertrúdix
+Nombre 3:
+Observaciones:
+
+
+Respuestas
+
+1# db.libros.find({autor:{$exists:false}, precio:{$gt:12}},{_id:0, titulo:1, precio:1})
+
+
+2# db.libros.count({autor:{$type:'string'}},{})
+ 
+
+3# db.libros.find({'opiniones.usuario':{$nin:['bertoldo']}},{_id:0, titulo:1})
+
+
+4# db.libros.find({genero:{$all:['romance','terror']}}, {_id:0, titulo:1})
+
+
+5# db.libros.count({$and:[{genero:'romance'}, {genero:{$nin:['terror']}}]})
+
+
+6# db.libros.count({'opiniones.0.puntos':{$gt:5}})
+
+
+7# db.libros.count({$or:[{'opiniones.usuario':'herminia'}, {precio:{$lt:10}}]})
+
+8# db.libros.find({'opiniones.2':{$exists:true}}, {_id:0, 'opiniones.$':1}).pretty()
+
+9# db.libros.find({genero:'romance'}, {_id:0, titulo:1, opiniones:{$elemMatch:{'usuario':'bertoldo', 'puntos':{$gte:8}}}}).pretty()
+
+
+10# db.entero.insert({'a':NumberInt(1)})
+
+
+
+
+

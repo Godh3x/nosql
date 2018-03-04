@@ -1,0 +1,29 @@
+NoSQL - práctica 3
+
+#Nombre1: David Antuña Rodríguez
+#Nombre2: Daniel Gutiérrez Gertrúdix
+#Nombre3:
+
+#Observaciones:
+
+#P1 Query: db.zancajos.update({_id : 'Ambros'},{$set : {País : 'Bélgica'}})
+
+
+#P2 Query: db.zancajos.update({_id : 'Oldo'}, {$push : {pedidos : {$each : [{item:'corbata dibujos de ositos',precio:120,enviada: false}], $position: 0}}})
+
+#P3 Query: db.zancajos.update({_id : 'Oldo'},{$set : {'pedidos.0.enviada' : true}})
+
+#P4 Query: db.zancajos.update({_id : 'Oldo'},{$inc : {compras : 1}})
+
+
+#P5 Query: db.zancajos.update({_id : 'Ambros'},{$addToSet : {telf : 2222}})
+
+#P6 Query: db.zancajos.update({pedidos : {$elemMatch : {precio : {$gt : 99}, enviada : true}}},{$set : {premium : true}},{upsert : true, multi : true})
+
+#P7 Query: db.zancajos.update({'País' : {$ne : 'España'}},{$unset:{premium:''}},{multi:true})
+
+#P8 Query: db.zancajos.remove({_id : 'Oldo', 'pedidos.enviada' : {$ne : false}})
+
+#P9 Query: db.pru.find({a : {$not : {$elemMatch : {$nin : [1,4,5,2,3,5,1,4,8]}}}},{})
+
+#P10 Query: db.zancajos.update({_id : 'Oldo'}, {$set : {'País' : 'Italia'}, $setOnInsert : {pedidos : []}}, {upsert : true})

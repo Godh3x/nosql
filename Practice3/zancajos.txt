@@ -1,0 +1,17 @@
+db.zancajos.drop()
+db.zancajos.insert(
+[{'_id': 'Oldo', 'País': 'España',  
+                 telf : [33333],
+                 pedidos:[{item:'cazadora',precio:200,enviada: true},
+                                 {item:'pajarita',precio:40,enviada: true}],
+    compras:2},
+ {'_id': 'Ambros', 'País': 'Italia',
+                telf : [1111,2222],
+                 pedidos:[{item:'pantalón chulo',precio:160,enviada: false},
+                                 {item:'marianos',precio:25,enviada: true}]},
+
+ {'_id': 'Isca', 'País': 'Alemania', telf:[],
+                pedidos:[{item:'pañuelo seda',precio:400,enviada: true},
+                                 {item:'falda',precio:60,enviada: false},
+                                {item:'calcetines',precio:6,enviada: false} ]},
+])
