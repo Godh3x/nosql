@@ -40,7 +40,7 @@ Authors
 ```
 
 ------
-### Tweets, from collections 'derbi',  which are replies to user with screen_name 'Jezivi1'
+### Tweets, from collection 'derbi',  which are replies to user with screen_name 'Jezivi1'
 
 ```json
 db.derbi.find(
@@ -152,7 +152,7 @@ _Missing statement_
 x[y] = 2
 ```
 ------
-### We have a collections with documents like:
+### We have a collection with documents like:
 ```json
 db.pru.insert({a:[10,20,30,40,50]})
 ```
